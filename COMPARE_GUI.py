@@ -36,11 +36,11 @@ while True:    # The Event Loop
                 isitago = 0
             #both files to have the same extension
             elif re.findall('/.+?/.+\.(.+)',file1) != re.findall('/.+?/.+\.(.+)',file2):
-                print('Error: The two files have different file extensions. Please correct')
+                print('Error: The two files have different file extensions. Please upload files with the same extentions')
                 isitago = 0
             #they need to be in a list of supported extensions
             elif re.findall('/.+?/.+\.(.+)',file1)[0] not in supportedextensions or re.findall('/.+?/.+\.(.+)',file2)[0] not in supportedextensions:
-                print('Error: File format currently not supported. At the moment only csv, xlsx, xlsm and json files are supported.')
+                print('Error: File format currently not supported. Only csv, xlsx, xlsm and json files are supported.')
                 isitago = 0
             elif file1 == file2:
                 print('Error: The files need to be different')
